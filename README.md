@@ -219,10 +219,10 @@ Alternatives to Nave and NVM include:
 
 ### Installing npm
 
-npm comes with Node.js, but if you need to change the version (we recommend 3.3.2 for this course), then use npm to update/degrage npm:
+npm comes with Node.js, but if you need to change the version (we recommend 3.3.12 for this course), then use npm to update/degrage npm:
 
 ```
-$ npm install -g npm@3.3.2
+$ npm install -g npm@3.3.12
 ```
 
 ### Checking the Installation
@@ -234,6 +234,6 @@ $ node -v
 $ npm -v
 ```
 
-You should see the 5.1.0 and 3.3.2 versions of Node.js and NPM that you've just downloaded and installed.
+You should see the 5.1.0 and 3.3.12 versions of Node.js and NPM that you've just downloaded and installed.
 
 
