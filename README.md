@@ -16,6 +16,11 @@ So you pumped up about Node? Me too. But before we can go any further, we need t
 
 ## Instructions
 
+1. Install Node.js v5.1.0 with one of the methods listed below
+2. Install npm v3.3.12 — typically comes with Node.js
+3. Check versions 5.1.0 and 3.3.12 for Node and npm respectively 
+
+
 ### One-Click Installers
 
 Firstly, let's go to the <http://nodejs.org> and download a one-click installer for your Operation System. Choose version 5.1.0. 
