@@ -18,7 +18,9 @@ So you pumped up about Node? Me too. But before we can go any further, we need t
 
 ### One-Click Installers
 
-Firstly, let's go to the <http://nodejs.org> and download a one-click installer for your Operation System. Don't choose binaries or source code unless you know what to do with them or your OS is not present (i.e., not Windows or Mac). The installers come with Node Package Manager (NPM) — important tool for dependencies manages.
+Firstly, let's go to the <http://nodejs.org> and download a one-click installer for your Operation System. Choose version 5.1.0. 
+
+Don't choose binaries or source code unless you know what to do with them or your OS is not present (i.e., not Windows or Mac). The installers come with Node Package Manager (NPM) — important tool for dependencies manages.
 
 If there's no installer for your OS, you can get source code and compile it yourself. 
 
@@ -198,13 +200,13 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 And after that, harness NVM's `install`:
 
 ```
-$ nvm install 5.1
+$ nvm install 5.1.0
 ```
 
 To switch that 5.1 version, simply apply the `use` command, e.g., 
 
 ```
-$ nvm use 5.1
+$ nvm use 5.1.0
 ```
 
 ## Alternative Multi-version Systems
@@ -232,6 +234,6 @@ $ node -v
 $ npm -v
 ```
 
-You should see the 5.10 and 3.3.2 versions of Node.js and NPM that you've just downloaded and installed.
+You should see the 5.1.0 and 3.3.2 versions of Node.js and NPM that you've just downloaded and installed.
 
 
