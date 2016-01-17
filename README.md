@@ -16,8 +16,8 @@ So you pumped up about Node? Me too. But before we can go any further, we need t
 
 ## Instructions
 
-1. Install Node.js v5.1.0 with one of the methods listed below
-2. Install npm v2.14.15 (typically comes with Node.js so you rarely if ever need to install it separately)
+1. Install Node v5.1.0 with one of the methods listed below
+2. Install npm v2.14.15 (typically comes with Node so you rarely if ever need to install it separately)
 3. Check versions 5.1.0 and 2.14.15 for Node and npm respectively 
 
 
@@ -25,11 +25,32 @@ So you pumped up about Node? Me too. But before we can go any further, we need t
 
 Firstly, let's go to the <http://nodejs.org> and download a one-click installer for your Operation System. Choose version 5.1.0. The differences between stable and long-term support (LTS) is that LTS is for enterprises.
 
-Don't choose binaries or source code unless you know what to do with them or your OS is not present (i.e., not Windows or Mac). The installers come with Node Package Manager (npm or NPM) — important tool for dependencies manages.
-
-If there's no installer for your OS, you can get source code and compile it yourself. 
+Don't choose binaries or source code unless you know what to do with them or your OS is not present (i.e., not Windows or Mac). The installers come with Node Package Manager (npm or NPM) — important tool for dependencies manages. No need to install npm separately, but you might want to downgrade to v2.14.15 because v3.x is slower.
 
 Note: for older Mac OS X machines, you can pick 32-bit versions.
+
+If there's no installer for your OS, you can get source code and compile it yourself (look for the installing from a tar file section in this file). The One-Click installer options will work for most of the developers. If you need other installation recipes, proceed with this text. Otherwise, run `$ npm test` to test the versions. You will see pass or not.
+
+
+### Installing npm
+
+npm comes with Node, but if you need to change the version (we recommend 2.14.15 for this course, because versions 3+ are slower than 2.x), then use npm to update/degrage npm. For example, if you have version 3.x, you can downgrade to 2.14.15 with:
+
+```
+$ npm install --global npm@2.14.15
+```
+
+### Checking the Installation
+
+To test your installations, run these commands in your Terminal app (command line `cmd.exe` in Windows):
+
+```bash
+$ node -v
+$ npm -v
+```
+
+You should see the 5.1.0 and 2.14.15 versions of Node and NPM that you've just downloaded and installed. Alternatively, run the tests for this lessons with `$ npm test`.
+
 
 ### Installing with HomeBrew or MacPorts
 
@@ -50,7 +71,7 @@ $ sudo port install nodejs
 
 For advanced users to avoid this, there's a 30 second installation (and [many others](https://gist.github.com/isaacs/579814)) from Isaac Z. Schlueter.
 
-Set up a folder for the latest Node.js:
+Set up a folder for the latest Node:
 
 ```bash
 $ echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
@@ -69,7 +90,7 @@ $ curl http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
 $ ./configure --prefix=~/local
 ```
 
-Build Node.js and install it:
+Build Node and install it:
 
 ```
 $ make install
@@ -77,7 +98,7 @@ $ curl https://npmjs.org/install.sh | sh
 ```
 
 
-Tip: If you find your self getting errors trying to install module globally via NPM (`$ npm install -g <packagename>`), re-installing Node.js and NPM with the solution above should eliminate the need for using `sudo` with the installation command.
+Tip: If you find your self getting errors trying to install module globally via NPM (`$ npm install -g <packagename>`), re-installing Node and NPM with the solution above should eliminate the need for using `sudo` with the installation command.
 
 ### Installing Without sudo
 
@@ -103,7 +124,7 @@ $ curl https://npmjs.org/install.sh | sh
 
 ### Installing From a Git Repo
 
-In case someone want to use the latest core Node.js code, and maybe even contribute to the Node.js and NPM projects, it's possible to build the installation from the cloned Git repo.
+In case someone want to use the latest core Node code, and maybe even contribute to the Node and NPM projects, it's possible to build the installation from the cloned Git repo.
 
 Making folders and adding path:
 
@@ -113,7 +134,7 @@ $ echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
 $ . ~/.bashrc
 ```
 
-Cloning original Node.js repo from Joyent (alternatively, someone can fork it and clone his/her own repository):
+Cloning original Node repo from Joyent (alternatively, someone can fork it and clone his/her own repository):
 
 ``` 
 $ git clone git://github.com/joyent/node.git
@@ -144,7 +165,7 @@ $ make link
 
 ### Multi-version Setup with Nave
 
-If someone plans to run multiple versions of Node.js, they should use [nave](https://github.com/isaacs/nave) which is a virtual environment for Node.js.
+If someone plans to run multiple versions of Node, they should use [nave](https://github.com/isaacs/nave) which is a virtual environment for Node.
 
 
 Make a folder:
@@ -161,7 +182,7 @@ $ wget http://github.com/isaacs/nave/raw/master/nave.sh
 $ sudo ln -s $PWD/nave.sh /usr/local/bin/nave
 ```
 
-This is an example of switching to Node.js version 5.1.0 in a virtual environment with Nave:
+This is an example of switching to Node version 5.1.0 in a virtual environment with Nave:
 
 ``` 
 $ nave use 5.1.0
@@ -185,7 +206,7 @@ And exit virtual environment with:
 exit
 ```
 
-More approaches to install Node.js and NPM in [gist](https://gist.github.com/isaacs/579814).
+More approaches to install Node and NPM in [gist](https://gist.github.com/isaacs/579814).
 
 
 ### Multi-version Setup with NVM
@@ -221,24 +242,5 @@ Alternatives to Nave and NVM include:
 * [neco](https://github.com/kuno/neco)
 * [n](https://github.com/visionmedia/n)
 
-
-### Installing npm
-
-npm comes with Node.js, but if you need to change the version (we recommend 2.14.15 for this course, because versions 3+ are slower than 2.x), then use npm to update/degrage npm. For example, if you have version 3.x, you can downgrade to 2.14.15 with:
-
-```
-$ npm install --global npm@2.14.15
-```
-
-### Checking the Installation
-
-To test your installations, run these commands in your Terminal app (command line `cmd.exe` in Windows):
-
-```bash
-$ node -v
-$ npm -v
-```
-
-You should see the 5.1.0 and 2.14.15 versions of Node.js and NPM that you've just downloaded and installed.
 
 
