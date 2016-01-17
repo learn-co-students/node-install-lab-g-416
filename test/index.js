@@ -13,6 +13,6 @@ test('node version', function (t) {
       console.log('exec error: ' + error)
     }
     stdout = stdout.replace('\n','')
-    t.equal(stdout, '3.3.12')
-  })    
+    t.equal(stdout, '2.14.15')
+  })
 })

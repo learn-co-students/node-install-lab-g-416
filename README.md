@@ -12,20 +12,20 @@ Installing Node and npm
 
 ## Introduction
 
-So you pumped up about Node? Me too. But before we can go any further, we need to install in on our system. 
+So you pumped up about Node? Me too. But before we can go any further, we need to install it on our system. 
 
 ## Instructions
 
 1. Install Node.js v5.1.0 with one of the methods listed below
-2. Install npm v3.3.12 — typically comes with Node.js
-3. Check versions 5.1.0 and 3.3.12 for Node and npm respectively 
+2. Install npm v2.14.15 (typically comes with Node.js so you rarely if ever need to install it separately)
+3. Check versions 5.1.0 and 2.14.15 for Node and npm respectively 
 
 
 ### One-Click Installers
 
-Firstly, let's go to the <http://nodejs.org> and download a one-click installer for your Operation System. Choose version 5.1.0. 
+Firstly, let's go to the <http://nodejs.org> and download a one-click installer for your Operation System. Choose version 5.1.0. The differences between stable and long-term support (LTS) is that LTS is for enterprises.
 
-Don't choose binaries or source code unless you know what to do with them or your OS is not present (i.e., not Windows or Mac). The installers come with Node Package Manager (NPM) — important tool for dependencies manages.
+Don't choose binaries or source code unless you know what to do with them or your OS is not present (i.e., not Windows or Mac). The installers come with Node Package Manager (npm or NPM) — important tool for dependencies manages.
 
 If there's no installer for your OS, you can get source code and compile it yourself. 
 
@@ -90,11 +90,11 @@ $ sudo chown -R $USER /usr/local/{share/man,bin,lib/node,include/node}
 
 Note: please be sure and be comfortable with what `chown` command does before running it.
 
-And then proceed to a normal installation:
+And then proceed to a normal installation of Node v5.1.0:
 
 ```
 $ mkdir node-install
-$ curl http://nodejs.org/dist/node-v0.4.3.tar.gz | tar -xzf - -C node-install
+$ curl https://nodejs.org/dist/v5.1.0/node-v5.1.0.tar.gz | tar -xzf - -C node-install
 $ cd node-install/*
 $ ./configure
 $ make install
@@ -161,10 +161,10 @@ $ wget http://github.com/isaacs/nave/raw/master/nave.sh
 $ sudo ln -s $PWD/nave.sh /usr/local/bin/nave
 ```
 
-This is an example of switching to Node.js version 0.4.8 in a virtual environment with Nave:
+This is an example of switching to Node.js version 5.1.0 in a virtual environment with Nave:
 
 ``` 
-$ nave use 0.4.8
+$ nave use 5.1.0
 ```
 
 To use NPM in this particular virtual environment, someone needs to use:
@@ -224,10 +224,10 @@ Alternatives to Nave and NVM include:
 
 ### Installing npm
 
-npm comes with Node.js, but if you need to change the version (we recommend 3.3.12 for this course), then use npm to update/degrage npm:
+npm comes with Node.js, but if you need to change the version (we recommend 2.14.15 for this course, because versions 3+ are slower than 2.x), then use npm to update/degrage npm. For example, if you have version 3.x, you can downgrade to 2.14.15 with:
 
 ```
-$ npm install -g npm@3.3.12
+$ npm install --global npm@2.14.15
 ```
 
 ### Checking the Installation
@@ -239,6 +239,6 @@ $ node -v
 $ npm -v
 ```
 
-You should see the 5.1.0 and 3.3.12 versions of Node.js and NPM that you've just downloaded and installed.
+You should see the 5.1.0 and 2.14.15 versions of Node.js and NPM that you've just downloaded and installed.
 
 
