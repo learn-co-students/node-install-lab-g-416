@@ -22,13 +22,13 @@ So you pumped up about Node? Me too. But before we can go any further, we need t
 
 ### One-Click Installers
 
-Firstly, let's go to the <http://nodejs.org> and download a one-click installer for your Operation System. Choose version 5.1.0. The differences between stable and long-term support (LTS) is that LTS is for enterprises.
+First, let's go to the <http://nodejs.org> and download a one-click installer for your Operation System. Choose version 5.1.0. The differences between stable and long-term support (LTS) is that LTS is for enterprises.
 
 Don't choose binaries or source code unless you know what to do with them or your OS is not present (i.e., not Windows or Mac). The installers come with Node Package Manager (npm or NPM) — important tool for dependencies manages. No need to install npm separately, but you might want to downgrade to v2.14.15 because v3.x is slower.
 
 Note: for older Mac OS X machines, you can pick 32-bit versions.
 
-If there's no installer for your OS, you can get source code and compile it yourself (look for the installing from a tar file section in this file). The One-Click installer options will work for most of the developers. If you need other installation recipes, proceed with this text. Otherwise, run `$ npm test` to test the versions. You will see pass or not.
+If there's no installer for your OS, you can get source code and compile it yourself (look for the installing from a tar file section in this file). The One-Click installer options will work for most of developers. If you need other installation recipes, proceed with this text. Otherwise, run `$ npm test` to test the versions. You will see pass or not.
 
 
 ### Installing npm
@@ -53,7 +53,7 @@ You should see the 5.1.0 and 2.14.15 versions of Node and NPM that you've just d
 
 ### Installing with HomeBrew or MacPorts
 
-If someone already has HomeBrew (`brew`) installed, straightforwardly run:
+If you already have HomeBrew (`brew`) installed, straightforwardly run:
 
 ```
 $ brew install node
@@ -164,7 +164,7 @@ $ make link
 
 ### Multi-version Setup with Nave
 
-If someone plans to run multiple versions of Node, they should use [nave](https://github.com/isaacs/nave) which is a virtual environment for Node.
+If you plan to run multiple versions of Node, you should use [nave](https://github.com/isaacs/nave) which is a virtual environment for Node.
 
 
 Make a folder:
