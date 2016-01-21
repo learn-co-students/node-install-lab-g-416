@@ -12,14 +12,13 @@ Installing Node and npm
 
 ## Introduction
 
-So you pumped up about Node? Me too. But before we can go any further, we need to install it on our system. 
+So you pumped up about Node? Me too. But before we can go any further, we need to install it on our system.
 
 ## Instructions
 
 1. Install Node v5.1.0 with one of the methods listed below
 2. Install npm v2.14.15 (typically comes with Node so you rarely if ever need to install it separately)
-3. Check versions 5.1.0 and 2.14.15 for Node and npm respectively 
-
+3. Check versions 5.1.0 and 2.14.15 for Node and npm respectively
 
 ### One-Click Installers
 
@@ -128,7 +127,7 @@ In case someone want to use the latest core Node code, and maybe even contribute
 
 Making folders and adding path:
 
-``` 
+```
 $ mkdir ~/local
 $ echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
 $ . ~/.bashrc
@@ -136,7 +135,7 @@ $ . ~/.bashrc
 
 Cloning original Node repo from Joyent (alternatively, someone can fork it and clone his/her own repository):
 
-``` 
+```
 $ git clone git://github.com/joyent/node.git
 $ cd node
 $ ./configure --prefix=~/local
@@ -154,7 +153,7 @@ Repeat for NPM:
 ```
 $ git clone git://github.com/isaacs/npm.git
 $ cd npm
-$ make install 
+$ make install
 ```
 
 For more cutting-edge NPM version:
@@ -184,7 +183,7 @@ $ sudo ln -s $PWD/nave.sh /usr/local/bin/nave
 
 This is an example of switching to Node version 5.1.0 in a virtual environment with Nave:
 
-``` 
+```
 $ nave use 5.1.0
 ```
 
@@ -197,7 +196,7 @@ $ curl https://npmjs.org/install.sh | sh
 After which it's possible to install something via NPM:
 
 ```
-$ npm install express 
+$ npm install express
 ```
 
 And exit virtual environment with:
@@ -229,7 +228,7 @@ And after that, harness NVM's `install`:
 $ nvm install 5.1.0
 ```
 
-To switch that 5.1 version, simply apply the `use` command, e.g., 
+To switch that 5.1 version, simply apply the `use` command, e.g.,
 
 ```
 $ nvm use 5.1.0
@@ -241,6 +240,3 @@ Alternatives to Nave and NVM include:
 
 * [neco](https://github.com/kuno/neco)
 * [n](https://github.com/visionmedia/n)
-
-
-
