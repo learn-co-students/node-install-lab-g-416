@@ -24,6 +24,8 @@ For the very advanced developers, there are a few recipes like installing from t
 1. Install Node v5.1.0 with one of the methods listed below
 2. Install npm v2.14.15 (typically comes with Node so you rarely if ever need to install it separately)
 3. Check versions 5.1.0 and 2.14.15 for Node and npm respectively
+4. Install testing dependencies with `$ npm install`
+5. Run tests to check for versions with `$ npm test`
 
 ## One-Click Installers (Recommended)
 
