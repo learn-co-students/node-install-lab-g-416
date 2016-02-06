@@ -4,19 +4,21 @@
   "description": "Installing Node and npm",
   "main": "index.js",
   "scripts": {
-    "test": "node test/index.js"
+    "test": "node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/learn-co-curriculum/node-install.git"
   },
-  "author": "",
+  "author": "Azat Mardan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/learn-co-curriculum/node-install/issues"
   },
   "homepage": "https://github.com/learn-co-curriculum/node-install#readme",
   "devDependencies": {
-    "tape": "^4.3.0"
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "semver": "^5.1.0"
   }
 }
