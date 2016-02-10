@@ -12,9 +12,9 @@ Installing Node and npm
 
 ## Introduction
 
-So you pumped up about Node? Me too. But before we can go any further, we need to install it on our system. 
+So you pumped up about Node? But before we can go any further, we need to install it on our system. 
 
-There are a few ways to install Node and npm. Our recommendation is to use one-click installer. Sometime you might work on projects which require different versions of Node and/or npm. We'll cover how to switch between them too. In this case use `n`, `nave` or `nvm`. 
+There are a few ways to install Node and npm. Our recommendation is to use one-click installer. Sometimes you might work on projects which require different versions of Node and/or npm. We'll cover how to switch between them too. In this case use `n`, `nave` or `nvm`. 
 
 For the very advanced developers, there are a few recipes like installing from the source code or taking ownership. If you are total beginner, stick with one-click installer or n/nave/nvm.
 
@@ -24,8 +24,8 @@ For the very advanced developers, there are a few recipes like installing from t
 1. Install Node v5.1.0 with one of the methods listed below
 2. Install npm v2.14.15 (typically comes with Node so you rarely if ever need to install it separately)
 3. Check versions 5.1.0 and 2.14.15 for Node and npm respectively
-4. Install testing dependencies with `$ npm install`
-5. Run tests to check for versions with `$ npm test`
+4. Install testing dependencies with `npm install`
+5. Run tests to check for versions with `npm test`
 
 ## One-Click Installers (Recommended)
 
@@ -35,7 +35,7 @@ Don't choose binaries or source code unless you know what to do with them or you
 
 Note: for older Mac OS X machines, you can pick 32-bit versions.
 
-If there's no installer for your OS, you can get source code and compile it yourself (look for the installing from a tar file section in this file). The One-Click installer options will work for most of developers. If you need other installation recipes, proceed with this text. Otherwise, run `$ npm test` to test the versions. You will see pass or not.
+If there's no installer for your OS, you can get source code and compile it yourself (look for the installing from a tar file section in this file). The One-Click installer options will work for most of developers. If you need other installation recipes, proceed with this text. Otherwise, run `npm test` to test the versions. You will see pass or not.
 
 Note: If you need to downgrade or upgrade Node, you can use one-click installer for that version. However, if you do it often enough (maybe you have 2 projects which require different versions) n/nave/nvm is a better option (covered below).
 
@@ -44,7 +44,7 @@ Note: If you need to downgrade or upgrade Node, you can use one-click installer 
 npm comes with Node, but if you need to change the version (we recommend 2.14.15 for this course, because versions 3+ are slower than 2.x), then use npm to update/degrade npm. For example, if you have version 3.x, you can downgrade to 2.14.15 with:
 
 ```
-$ npm install --global npm@2.14.15
+npm install --global npm@2.14.15
 ```
 
 
@@ -53,11 +53,11 @@ $ npm install --global npm@2.14.15
 To test your installations, run these commands in your Terminal app (command line `cmd.exe` in Windows):
 
 ```bash
-$ node -v
-$ npm -v
+node -v
+npm -v
 ```
 
-You should see the 5.1.0 and 2.14.15 versions of Node and NPM that you've just downloaded and installed. Alternatively, run the tests for this lessons with `$ npm test`.
+You should see the 5.1.0 and 2.14.15 versions of Node and NPM that you've just downloaded and installed. Alternatively, run the tests for this lessons with ` npm test`.
 
 
 ## Installing with HomeBrew
@@ -65,14 +65,14 @@ You should see the 5.1.0 and 2.14.15 versions of Node and NPM that you've just d
 If you already have HomeBrew (`brew`) installed, straightforwardly run:
 
 ```
-$ brew install node
-$ brew install npm
+brew install node
+brew install npm
 ```
 
 
 ## Multi-version Setup with Nave
 
-If you plan to run multiple versions of Node to be able to switch between them fast, you should use [nave](https://github.com/isaacs/nave) which is a virtual environment for Node.
+If you plan to run multiple versions of Node to be able to quickly switch between them, you should use [nave](https://github.com/isaacs/nave) which is a virtual environment for Node.
 
 Make a folder:
 
@@ -84,26 +84,26 @@ cd ~/.nave
 Downloading Nave and setting the link to PATH'ed folder:
 
 ```
-$ wget http://github.com/isaacs/nave/raw/master/nave.sh
-$ sudo ln -s $PWD/nave.sh /usr/local/bin/nave
+wget http://github.com/isaacs/nave/raw/master/nave.sh
+sudo ln -s $PWD/nave.sh /usr/local/bin/nave
 ```
 
 This is an example of switching to Node version 5.1.0 in a virtual environment with Nave:
 
 ```
-$ nave use 5.1.0
+nave use 5.1.0
 ```
 
 To use NPM in this particular virtual environment, someone needs to use:
 
 ```
-$ curl https://npmjs.org/install.sh | sh
+curl https://npmjs.org/install.sh | sh
 ```
 
 After which it's possible to install something via NPM:
 
 ```
-$ npm install express
+npm install express
 ```
 
 And exit virtual environment with:
@@ -120,25 +120,25 @@ More approaches to install Node and NPM in [gist](https://gist.github.com/isaacs
 Another options to Nave is NVM — Node Version Manager ([GitHub](https://github.com/creationix/nvm)). You can install NVM with:
 
 ```
-$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 ```
 
 or
 
 ```
-$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 ```
 
 And after that, harness NVM's `install`:
 
 ```
-$ nvm install 5.1.0
+nvm install 5.1.0
 ```
 
 To switch that 5.1 version, simply apply the `use` command, e.g.,
 
 ```
-$ nvm use 5.1.0
+nvm use 5.1.0
 ```
 
 ## Alternative Multi-Version Systems
@@ -156,11 +156,11 @@ If one-click installers are not working for you or your system, the sure-proof o
 First, set up a folder for the latest Node:
 
 ```bash
-$ echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
-$ . ~/.bashrc
-$ mkdir ~/local
-$ mkdir ~/node-latest-install
-$ cd ~/node-latest-install
+echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+. ~/.bashrc
+mkdir ~/local
+mkdir ~/node-latest-install
+cd ~/node-latest-install
 ```
 
 Note: advanced users who chose to make their own builds need to have certain compilers installed first. For more information, refer to [the official documentation](https://github.com/joyent/node/wiki/Installation).
@@ -168,28 +168,28 @@ Note: advanced users who chose to make their own builds need to have certain com
 Download the tar file with CURL, and unpack it:
 
 ```
-$ curl http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
-$ ./configure --prefix=~/local
+curl http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
+./configure --prefix=~/local
 ```
 
 Now, build Node and install it:
 
 ```
-$ make install
-$ curl https://npmjs.org/install.sh | sh
+make install
+curl https://npmjs.org/install.sh | sh
 ```
 
 More recipes for advanced users like this are at [a 30 second installation](https://gist.github.com/isaacs/579814)) by Isaac Z. Schlueter.
 
-If you find your self getting errors trying to install module globally via NPM (`$ npm install -g <packagename>`), re-installing Node and NPM with the solution above should eliminate the need for using `sudo` with the installation command.
+If you find your self getting errors trying to install module globally via NPM (`npm install -g <packagename>`), re-installing Node and NPM with the solution above should eliminate the need for using `sudo` with the installation command.
 
 ## Installing Without sudo (Advanced)
 
-Sometimes depending on your configuration, NPM will ask users for `sudo` — root user permissions. This will happen when trying to install module globally via NPM (`$ npm install --global <packagename>`). To avoid using `sudo`, advanced developers can use:
+Sometimes depending on your configuration, NPM will ask users for `sudo` — root user permissions. This will happen when trying to install module globally via NPM (`npm install --global <packagename>`). To avoid using `sudo`, advanced developers can use:
 
 ```
-$ sudo mkdir -p /usr/local/{share/man,bin,lib/node,include/node}
-$ sudo chown -R $USER /usr/local/{share/man,bin,lib/node,include/node}
+sudo mkdir -p /usr/local/{share/man,bin,lib/node,include/node}
+sudo chown -R $USER /usr/local/{share/man,bin,lib/node,include/node}
 ```
 
 Note: please be sure and be comfortable with what `chown` command does before running it.
@@ -197,12 +197,12 @@ Note: please be sure and be comfortable with what `chown` command does before ru
 And then proceed to a normal installation of Node v5.1.0:
 
 ```
-$ mkdir node-install
-$ curl https://nodejs.org/dist/v5.1.0/node-v5.1.0.tar.gz | tar -xzf - -C node-install
-$ cd node-install/*
-$ ./configure
-$ make install
-$ curl https://npmjs.org/install.sh | sh
+mkdir node-install
+curl https://nodejs.org/dist/v5.1.0/node-v5.1.0.tar.gz | tar -xzf - -C node-install
+cd node-install/*
+./configure
+make install
+curl https://npmjs.org/install.sh | sh
 ```
 
 ## Installing From a Git Repo (Advanced)
@@ -211,39 +211,31 @@ In case someone want to use the latest core Node code, and maybe even contribute
 
 Making folders and adding path:
 
-```
-$ mkdir ~/local
-$ echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
-$ . ~/.bashrc
+mkdir ~/loecho 'export PATH=$HOME/local/bin:$PATH' >> ~/.bas. ~/.bashrc
 ```
 
 Cloning original Node repo from Joyent (alternatively, someone can fork it and clone his/her own repository):
 
-```
-$ git clone git://github.com/joyent/node.git
-$ cd node
-$ ./configure --prefix=~/local
+``git clone git://github.com/joyent/node.gicd nod./configure --prefix=~/local
 ```
 
 Making the build:
 
-```
-$ make install
-$ cd ..
+``make instalcd ..
 ```
 
 Repeat for NPM:
 
 ```
-$ git clone git://github.com/isaacs/npm.git
-$ cd npm
-$ make install
+git clone git://github.com/isaacs/npm.git
+cd npm
+make install
 ```
 
 For more cutting-edge NPM version:
 
 ```
-$ make link
+make link
 ```
 
 ## Summary
