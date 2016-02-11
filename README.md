@@ -243,3 +243,6 @@ We know that there are a lot of recipes to install Node and npm in this lesson. 
 1. Are you an advanced programmer familiar with C/C++ who plans to read Node code and contribute to the core (Node itself)? If yes, then use GitHub, and compile the code yourself. If not, then go to step 2.
 2. Do you plan to work on projects which require drastically different versions of Node (for example 0.12 and 5.3)? If yes, then use n/nave/nvm. If not, then go to step 3.
 4. Do you have a one-click installer for your OS (Windows, or Mac)? If yes, then use one-click installer. If not you are advanced enough user of Unix-like system to compile from the source code in the tar package.
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/node-install-lab' title='node-install-lab'>node-install-lab</a> on Learn.co and start learning to code for free.</p>
+
