@@ -127,13 +127,13 @@ or
 wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 ```
 
-And after that, harness NVM's `install`:
+And after that, harness NVM's `install` to install version 5.1.0 of Node:
 
 ```
 nvm install 5.1.0
 ```
 
-To switch that 5.1 version, simply apply the `use` command, e.g.,
+To switch that 5.1 version of node, simply apply the `use` command, e.g.,
 
 ```
 nvm use 5.1.0
