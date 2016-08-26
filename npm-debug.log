@@ -1,0 +1,50 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'n' ]
+2 info using npm@3.8.9
+3 info using node@v6.2.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData n
+8 silly fetchNamedPackageData n
+9 silly mapToRegistry name n
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'n',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   name: 'n',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/n
+14 verbose request uri https://registry.npmjs.org/n
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 9:15:21 PM
+17 verbose request id e76b83e865a6d040
+18 verbose etag "AL5RQHIZ0S2RY5U35V53SPLGU"
+19 http request GET https://registry.npmjs.org/n
+20 verbose stack TypeError: Cannot read property 'tunnel' of undefined
+20 verbose stack     at Tunnel.isEnabled (/usr/local/lib/node_modules/npm/node_modules/request/lib/tunnel.js:126:21)
+20 verbose stack     at Request.init (/usr/local/lib/node_modules/npm/node_modules/request/request.js:295:30)
+20 verbose stack     at new Request (/usr/local/lib/node_modules/npm/node_modules/request/request.js:142:8)
+20 verbose stack     at request (/usr/local/lib/node_modules/npm/node_modules/request/index.js:55:10)
+20 verbose stack     at CachingRegistryClient.makeRequest (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:149:13)
+20 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:66:17
+20 verbose stack     at RetryOperation._fn (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/attempt.js:18:5)
+20 verbose stack     at RetryOperation.attempt (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/lib/retry_operation.js:74:8)
+20 verbose stack     at CachingRegistryClient.attempt (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/attempt.js:11:13)
+20 verbose stack     at CachingRegistryClient.regRequest [as _request] (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:65:8)
+21 verbose cwd /Users/sameerabachoti/Development/code/node-install-lab-g-416
+22 error Darwin 15.6.0
+23 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "n"
+24 error node v6.2.0
+25 error npm  v3.8.9
+26 error Cannot read property 'tunnel' of undefined
+27 error If you need help, you may report this error at:
+27 error     <https://github.com/npm/npm/issues>
+28 verbose exit [ 1, true ]
