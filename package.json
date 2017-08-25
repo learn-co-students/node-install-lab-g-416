@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/learn-co-curriculum/node-install#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.4.5",
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
     "semver": "^5.1.0"
   }
 }
