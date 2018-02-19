@@ -3,15 +3,15 @@ var expect = require('chai').expect,
   semver = require('semver')
 
 describe('node version', function () {
-  it('must be 5.1', function(done){
-    expect(process.versions.node).to.equal('5.1.0')
+  it('must be 8.9.3', function(done){
+    expect(process.versions.node).to.equal('8.9.3')
     done()
   })
 
 })
 
 describe('npm version', function () {
-  it('must be 2.14.15 or greater', function(done){
+  it('must be 5.5.1 or greater', function(done){
     child = cp.exec('npm -v',
     function (error, stdout, stderr) {
       expect(stderr).to.equal('')
@@ -19,7 +19,7 @@ describe('npm version', function () {
         console.log('exec error: ' + error)
       }
       stdout = stdout.replace('\n','')
-      expect(semver.satisfies(stdout, '>=2.14.15')).to.equal(true)
+      expect(semver.satisfies(stdout, '>=5.5.1')).to.equal(true)
       done()
     })
   })
