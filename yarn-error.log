@@ -1,0 +1,59 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add node 5.1
+
+PATH: 
+  /var/opt/rails/bin:/var/opt/httpserver/bin:/var/opt/atom/bin:/var/opt/shotgun/bin:/var/opt/rackup/bin:/var/opt/jekyll/bin:/usr/local/rvm/gems/ruby-2.3.1/bin:/usr/local/rvm/gems/ruby-2.3.1@global/bin:/usr/local/rvm/rubies/ruby-2.3.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/rvm/bin
+
+Yarn version: 
+  1.6.0
+
+Node version: 
+  8.11.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/5.1: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:65327:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:133155:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:134138:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:134058:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "node-install",
+    "version": "1.0.0",
+    "description": "Installing Node and npm",
+    "main": "index.js",
+    "scripts": {
+      "test": "node_modules/mocha/bin/mocha"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/learn-co-curriculum/node-install.git"
+    },
+    "author": "Azat Mardan",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/learn-co-curriculum/node-install/issues"
+    },
+    "homepage": "https://github.com/learn-co-curriculum/node-install#readme",
+    "devDependencies": {
+      "chai": "^3.5.0",
+      "mocha": "^2.4.5",
+      "semver": "^5.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
