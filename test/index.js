@@ -4,7 +4,7 @@ var expect = require('chai').expect,
 
 describe('node version', function () {
   it('must be 5.1', function(done){
-    expect(process.versions.node).to.equal('5.1.0')
+    expect(process.versions.node).to.equal('8.15.0')
     done()
   })
 
