@@ -3,10 +3,10 @@ var expect = require('chai').expect,
   semver = require('semver')
 
 describe('node version', function () {
-  it('must be 5.1', function(done){
-    expect(process.versions.node).to.equal('5.1.0')
-    done()
-  })
+  it("must be 12.18.3", function (done) {
+    expect(process.versions.node).to.equal("12.18.3");
+    done();
+  });
 
 })
 
