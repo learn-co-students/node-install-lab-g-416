@@ -4,7 +4,7 @@ var expect = require('chai').expect,
 
 describe('node version', function () {
   it('must be 5.1', function(done){
-    expect(process.versions.node).to.equal('5.1.0')
+    expect(process.versions.node).to.equal('12.13.1')
     done()
   })
 
@@ -19,7 +19,7 @@ describe('npm version', function () {
         console.log('exec error: ' + error)
       }
       stdout = stdout.replace('\n','')
-      expect(semver.satisfies(stdout, '>=2.14.15')).to.equal(true)
+      expect(semver.satisfies(stdout, '>=6.12.1')).to.equal(true)
       done()
     })
   })
