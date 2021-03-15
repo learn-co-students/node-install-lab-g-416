@@ -10,7 +10,7 @@
 
 ## Introduction
 
-So you pumped up about Node? But before we can go any further, we need to install it on our system. 
+So you pumped up about Node? But before we can go any further, we need to install it on our systems. 
 
 There are a few ways to install Node and npm. Our recommendation is to use one-click installer. Sometimes you might work on projects which require different versions of Node and/or npm. We'll cover how to switch between them too. In this case use `n`, `nave` or `nvm`. 
 
