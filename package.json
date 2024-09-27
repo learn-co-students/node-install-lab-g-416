@@ -20,5 +20,8 @@
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
     "semver": "^5.1.0"
+  },
+  "dependencies": {
+    "mocha-multi": "^1.1.3"
   }
 }
